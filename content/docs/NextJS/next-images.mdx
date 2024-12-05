@@ -1,0 +1,23 @@
+---
+title: NextJS Config
+description: Configure image urls
+---
+
+## How to configure image urls in for next Image component?
+
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '**',
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;
+```
